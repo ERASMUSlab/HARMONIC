@@ -2,7 +2,9 @@ url: https://erasmuslab.github.io/MANGO
 
 template:
   bootstrap: 5
-  bootswatch: darkly
+  bslib:
+    primary: "#F4A300"  
+    link-color: "#D97706"
 navbar:
   structure:
     left:  [home, reference, articles, news]
