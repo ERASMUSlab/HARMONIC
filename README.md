@@ -25,6 +25,12 @@ remotes::install_github("ERASMUSlab/MANGO")
 Full documentation and tutorials:
 https://erasmuslab.github.io/MANGO
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ERASMUSlab/MANGO/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ERASMUSlab/MANGO/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/ERASMUSlab/MANGO/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/ERASMUSlab/MANGO/actions/workflows/pkgdown.yaml)
+[![Website](https://img.shields.io/badge/website-pkgdown-F4A300)](https://erasmuslab.github.io/MANGO)
+<!-- badges: end -->
+
 ## Citation
 
 If you use MANGO in your research, please cite:
