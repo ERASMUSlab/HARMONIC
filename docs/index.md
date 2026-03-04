@@ -1,1 +1,3 @@
-\![MANGO banner\](man/figures/MANGO_BANNER.jpg
+![MANGO banner](reference/figures/MANGO_BANNER.jpg)
+
+MANGO banner
