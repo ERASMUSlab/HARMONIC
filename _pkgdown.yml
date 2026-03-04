@@ -1,20 +1,46 @@
 url: https://erasmuslab.github.io/MANGO
+destination: docs
 
 template:
   bootstrap: 5
-  bootswatch: flatly  
+  bootswatch: flatly
   bslib:
-    primary: "#F4A300"  
+    primary: "#F4A300"
     link-color: "#F4A300"
 
 navbar:
-  bg: "#F4A300"   
-  type: dark    
-  structure:
-    left:  [home, reference, articles, news]
-    right: [github]
-  components:
-    github:
-      icon: fa-github
+  title: "MANGO"
+  bg: "#F4A300"
+  type: dark
+
+  left:
+    - text: "Install"
+      href: articles/MANGO-install.html
+
+    - text: "Data Preprocessing & Analysis"
+      menu:
+        - text: "Overview"
+          href: articles/MANGO-intro.html
+        - text: "Single case"
+          href: articles/single-case.html
+        - text: "Multiple case"
+          href: articles/multi-case.html
+
+    - text: "Visualization"
+      menu:
+        - text: "Overview"
+          href: articles/MANGO-intro.html#visualization
+        - text: "Single case"
+          href: articles/vis-single.html
+        - text: "Multiple case"
+          href: articles/vis-multi.html
+
+    - text: "Reference"
+      href: reference/index.html
+
+  right:
+    - icon: fa-home
+      href: index.html
+    - icon: fa-github
       aria-label: GitHub
       href: https://github.com/ERASMUSlab/MANGO
