@@ -15,3 +15,8 @@ remotes::install_github("ERASMUSlab/MANGO")
 
 Full documentation and tutorials:
 https://erasmuslab.github.io/MANGO
+
+## Citation
+
+If you use MANGO in your research, please cite:
+https://erasmuslab.github.io/MANGO/authors.html#citation
