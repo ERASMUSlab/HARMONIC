@@ -1,0 +1,4 @@
+/* Prevent content from being hidden under the fixed navbar */
+body {
+  padding-top: 80px;   /* 70~90 사이로 필요하면 조절 */
+}
