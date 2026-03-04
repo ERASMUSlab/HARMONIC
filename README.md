@@ -4,7 +4,7 @@ MANGO is an R package for Gene Ontology (GO) Biological Process enrichment analy
 ![Alt text](./FIG/MANGO_F1.jpg "MANGO")
 >- **Problem:** GO Biological Process enrichment results are often dominated by biologically similar top terms, and GO’s hierarchical DAG + gene sharing can create **structural false positives**, reducing interpretability and confidence.
 >- **Solution (MANGO):** An analytical framework that reorganizes GO outputs into **ontology-informed term trees** and applies **structural filtering** based on **within-tree consistency**.
->- **Key idea 1 — Tree structuring:** MANGO groups similar terms into trees to reduce redundancy and compress results into interpretable units.
+>- **Key idea 1 — Tree organizing:** MANGO groups similar terms into trees to reduce redundancy and compress results into interpretable units.
 >- **Key idea 2 — Active-tree filtering:** MANGO suppresses isolated, single-term–driven signals using an **active-tree criterion**.
 >- **Multiple-case support:** MANGO aligns results from multiple comparisons into a **shared tree structure** and classifies **common vs condition-specific** trees using **HWES** and relative signal strength across conditions.
 >- **Parameter recommendations:** A parameter search provides **input-size–specific recommended settings**.
