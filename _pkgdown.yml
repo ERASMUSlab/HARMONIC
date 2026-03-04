@@ -3,12 +3,15 @@ url: https://erasmuslab.github.io/MANGO
 template:
   bootstrap: 5
   bslib:
-    primary: "#F4A300"  
+    primary: "#F4A300" 
     link-color: "#D97706"
+
 navbar:
+  bg: primary
+  type: dark
   structure:
     left:  [home, reference, articles, news]
-    right: [lightswitch,github]
+    right: [github]
   components:
     github:
       icon: fa-github
