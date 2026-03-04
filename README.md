@@ -15,10 +15,18 @@ MANGO is an R package for Gene Ontology (GO) Biological Process enrichment analy
 
 ## Installation
 
-```r
-wget -P GO_BB_dirpath https://github.com/user-attachments/files/25747922/GO_BB.tar.gz
-tar -xzf GO_BB_dirpath/GO_BB.tar.gz
+### Linux / macOS (terminal)
 
+```bash
+mkdir -p GO_BB_dirpath
+wget -O GO_BB_dirpath/GO_BB.tar.gz https://github.com/user-attachments/files/25747922/GO_BB.tar.gz
+tar -xzf GO_BB_dirpath/GO_BB.tar.gz -C GO_BB_dirpath
+```
+
+### R
+
+
+```r
 # install.packages("remotes")
 remotes::install_github("ERASMUSlab/MANGO")
 ```
