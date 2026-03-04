@@ -1,0 +1,14 @@
+url: https://erasmuslab.github.io/MANGO
+
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left:  [home, reference, articles, news]
+    right: [github]
+  components:
+    github:
+      icon: fa-github
+      aria-label: GitHub
+      href: https://github.com/ERASMUSlab/MANGO
