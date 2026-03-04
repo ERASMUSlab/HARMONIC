@@ -4,11 +4,11 @@ template:
   bootstrap: 5
   bslib:
     primary: "#F4A300" 
-    link-color: "#D97706"
+    navbar-bg: "#F4A300"
+    navbar-fg: "#ffffff"
+    navbar-hl: "#ffffff"
 
 navbar:
-  bg: primary
-  type: dark
   structure:
     left:  [home, reference, articles, news]
     right: [github]
