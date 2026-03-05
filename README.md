@@ -19,10 +19,13 @@ MANGO is an R package for Gene Ontology (GO) Biological Process enrichment analy
 
 ```bash
 ## Using conda OR micromamba
+
 micromamba create -n MANGO
 micromamba activate MANGO
+
 micromamba install -c conda-forge -c r -c bioconda -y \
 jupyter_core jupyter_client jupyterlab_pygments jupyter_server r-irkernel jupyterlab r=4.3.1
+
 micromamba install -c conda-forge -c r -c bioconda -y \
 r-png r-data.table r-systemfonts r-gdtools r-ggforce r-ggiraph bioconductor-xvector bioconductor-sparsearray \
 bioconductor-biostrings bioconductor-delayedarray bioconductor-summarizedexperiment bioconductor-annotationdbi \
