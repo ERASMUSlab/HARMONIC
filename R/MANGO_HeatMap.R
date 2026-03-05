@@ -175,17 +175,17 @@ MANGO_HeatMap <- function(filepath,
 
         if (trends == "UP") {
             col_set <- grDevices::colorRampPalette(
-                c("grey80", "#F5B78EFF", "#F19C7CFF", "#EA8171FF", "#DD686CFF", "#CA5268FF", "#B13F64FF")
+                c("white", "#F5B78EFF", "#F19C7CFF", "#EA8171FF", "#DD686CFF", "#CA5268FF", "#B13F64FF")
             )(100)
         }
         if (trends == "DOWN") {
             col_set <- grDevices::colorRampPalette(
-                c("grey80", "#CCFDFFFF", "#99F8FFFF", "#66F0FFFF", "#33E4FFFF", "#00AACCFF", "#007A99FF")
+                c("white", "#CCFDFFFF", "#99F8FFFF", "#66F0FFFF", "#33E4FFFF", "#00AACCFF", "#007A99FF")
             )(100)
         }
         if (trends == "SIG") {
             col_set <- grDevices::colorRampPalette(
-                c("grey80", "tan1", "tan2", "tan3", "orange", "brown")
+                c("white", "tan1", "tan2", "tan3", "orange", "brown")
             )(100)
         }
 
