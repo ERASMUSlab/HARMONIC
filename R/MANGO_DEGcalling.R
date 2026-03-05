@@ -44,9 +44,12 @@ MANGO_DEGcalling = function(filepath,
     s = 1
     mango_design_DF_split = as.data.frame(strsplit(mango_design_DF[s,1], split = "_"))
 
+    if(nrow(mango_design_DF)>1){
+
     for(i in 2:nrow(mango_design_DF)){
         mango_design_DF_split_frag = as.data.frame(strsplit(mango_design_DF[i,1], split = "_"))
         mango_design_DF_split = cbind(mango_design_DF_split, mango_design_DF_split_frag)
+    }
     }
 
     for(i in 1:nrow(mango_design_DF)){
