@@ -7,17 +7,16 @@ template:
   bslib:
     primary: "#F4A300"
     link-color: "#F4A300"
-  assets:
-    - pkgdown
+
 navbar:
   title: "MANGO"
   bg: "#F4A300"
   type: dark
-
   left:
+    - text: "Home"
+      href: index.html
     - text: "Install"
       href: articles/MANGO-install.html
-
     - text: "Data Preprocessing & Analysis"
       menu:
         - text: "Overview"
@@ -26,7 +25,6 @@ navbar:
           href: articles/single-case.html
         - text: "Multiple case"
           href: articles/multi-case.html
-
     - text: "Visualization"
       menu:
         - text: "Overview"
@@ -35,14 +33,13 @@ navbar:
           href: articles/vis-single.html
         - text: "Multiple case"
           href: articles/vis-multi.html
-
     - text: "Reference"
       href: reference/index.html
-  
   right:
-    - icon: fa-home
-      aria-label: Home
-      href: index.html
     - icon: fa-github
       aria-label: GitHub
       href: https://github.com/ERASMUSlab/MANGO
+
+home:
+  title: "MANGO"
+  description: "Ontology/DAG-based GO term structuring and visualization for single and multi case enrichment analysis."

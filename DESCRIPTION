@@ -23,10 +23,12 @@ VignetteBuilder: knitr
 Imports: 
     circlize,
     clusterProfiler,
+    DESeq2,
     dplyr,
     forcats,
     ggplot2,
     magrittr,
     pheatmap,
     rlang,
-    stringr
+    stringr,
+    SummarizedExperiment

@@ -12,6 +12,10 @@ MANGO_ANALYSIS(
   PASSED_RATIO,
   PASSED_NUM,
   similarity,
+  type = "standard",
+  full_condition,
+  number_of_rep,
+  mango_design,
   FC = 2,
   condition = 1,
   dynamic_analyisis = "F",
@@ -32,6 +36,16 @@ MANGO_ANALYSIS(
 \item{PASSED_NUM}{Passed dependency count threshold.}
 
 \item{similarity}{Similarity cutoff (\%).}
+
+\item{type}{DEG calling mode. One of \code{"standard"} or \code{"broad"}.
+\code{"standard"} uses \code{adjp=0.05} and \code{FC=2}; \code{"broad"} uses
+\code{adjp=0.05} and \code{FC=1.5}.}
+
+\item{full_condition}{Character vector of condition names (must match sample condition labels).}
+
+\item{number_of_rep}{Integer vector of replicate counts for each condition in \code{full_condition}.}
+
+\item{mango_design}{Character vector specifying contrasts and direction to export.}
 
 \item{FC}{Fold-change ratio cutoff.}
 
@@ -58,7 +72,11 @@ MANGO_ANALYSIS(
   core=1,
   PASSED_RATIO=15,
   PASSED_NUM=4,
-  similarity=70
+  similarity=70,
+  type = "broad",
+  full_condition = c("DAY0","DAY4","DAY7","DAY10","DAY14","DAY21"),
+  number_of_rep = c(3,3,3,6,3,3),
+  mango_design = c("DAY4_DAY0_UP","DAY7_DAY0_UP","DAY10_DAY0_UP","DAY14_DAY0_UP","DAY21_DAY0_UP")
 )
 }
 }
