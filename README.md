@@ -31,7 +31,7 @@ r-png r-data.table r-systemfonts r-gdtools r-ggforce r-ggiraph bioconductor-xvec
 bioconductor-biostrings bioconductor-delayedarray bioconductor-summarizedexperiment bioconductor-annotationdbi \
 bioconductor-go.db bioconductor-keggrest bioconductor-fgsea bioconductor-deseq2 bioconductor-gosemsim pigz \
 bioconductor-dose bioconductor-enrichplot bioconductor-clusterprofiler bioconductor-ggtree \
-bioconductor-org.mm.eg.db 
+bioconductor-org.mm.eg.db bioconductor-org.hs.eg.db
 
 mkdir path_to_MANGOanalysis
 wget -P path_to_MANGOanalysis https://github.com/user-attachments/files/25766902/MANGO_FORMAT.tar.gz
