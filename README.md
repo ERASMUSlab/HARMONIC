@@ -58,6 +58,22 @@ cp path_to_input_countMATRIX RAWcount.txt
 ```r
 # install.packages("remotes")
 remotes::install_github("ERASMUSlab/MANGO")
+
+MANGO_ANALYSIS(filepath = "/home/RNA/gitMANGO/MANGO_DIFF/MANGO",
+               type = "broad",
+               full_condition = c("DAY0","DAY4","DAY7","DAY10","DAY14","DAY21"),
+               number_of_rep = c(3,3,3,6,3,3),
+               DEG_list_name = "input_DEG_list.txt",
+               mango_design = c("DAY4_DAY0_UP","DAY7_DAY0_UP","DAY10_DAY0_UP","DAY14_DAY0_UP","DAY21_DAY0_UP"),
+               core = 5,
+               ref_genome = "mm",
+               PASSED_RATIO = 15,
+               PASSED_NUM = 3,
+               similarity = 80,
+               FC = 2, 
+               condition = c(1,3), 
+               dynamic_analyisis = "T",
+               preprocessing = "T")
 ```
 
 ## Documentation
