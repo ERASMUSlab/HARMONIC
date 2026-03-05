@@ -29,8 +29,26 @@ jupyter_core jupyter_client jupyterlab_pygments jupyter_server r-irkernel jupyte
 micromamba install -c conda-forge -c r -c bioconda -y \
 r-png r-data.table r-systemfonts r-gdtools r-ggforce r-ggiraph bioconductor-xvector bioconductor-sparsearray \
 bioconductor-biostrings bioconductor-delayedarray bioconductor-summarizedexperiment bioconductor-annotationdbi \
-bioconductor-go.db bioconductor-keggrest bioconductor-fgsea bioconductor-deseq2 bioconductor-gosemsim \
+bioconductor-go.db bioconductor-keggrest bioconductor-fgsea bioconductor-deseq2 bioconductor-gosemsim pigz \
 bioconductor-dose bioconductor-enrichplot bioconductor-clusterprofiler bioconductor-ggtree
+
+mkdir path_to_MANGOanalysis
+wget -P path_to_MANGOanalysis https://github.com/user-attachments/files/25759829/MANGO_FORMAT.tar.gz
+### ex) wget -P /home/RNA/gitMANGO/ https://github.com/user-attachments/files/25759829/MANGO_FORMAT.tar.gz
+
+cd path_to_MANGOanalysis
+pigz -dc -p 4 MANGO_FORMAT.tar.gz | tar -xf -
+
+mv MANGO_FORMAT MANGO_project_name
+### ex) MANGO_FORMAT MANGO_DIFF
+
+cd MANGO_project_name/MANGO
+pwd
+### result of pwd is filepath we use in R
+
+cd count
+cp path_to_input_countMATRIX RAWcount.txt
+### ex) cp RAWcount_DIFF.txt RAWcount.txt
 ```
 
 ### R
