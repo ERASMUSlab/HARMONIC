@@ -1,4 +1,4 @@
-# HARMONIC: Multi-case Active oNtology-based GO organizer
+# HARMONIC: Hierarchy-based Active-tree Redundancy-Minimized ONtology Integrative Comparator
 HARMONIC is an R package for Gene Ontology (GO) Biological Process enrichment analysis that reduces redundancy in top-ranked results by restructuring enriched terms into ontology-guided term trees based on the GO DAG. It defines and filters active trees using coverage/consistency criteria to suppress structurally driven false positives arising from hierarchical dependencies. HARMONIC supports single- and multiple- case study designs by integrating enrichment outputs across conditions, providing scoring options and visualization utilities to summarize common and condition-specific biological processes. Optional features include ORA-style soft filtering and fold-change-aware weighting for tree and term prioritization.
 
 ![Alt text](./FIG/HARMONIC_F1.jpg "HARMONIC")
