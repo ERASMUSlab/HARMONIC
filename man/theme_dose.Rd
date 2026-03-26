@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_dose.R
 \name{theme_dose}
 \alias{theme_dose}
-\title{MANGO default plotting theme}
+\title{HARMONIC default plotting theme}
 \usage{
 theme_dose(base_size = 12)
 }
@@ -13,5 +13,5 @@ theme_dose(base_size = 12)
 A ggplot2 theme object.
 }
 \description{
-A ggplot2 theme used across MANGO plotting functions (grid-on style).
+A ggplot2 theme used across HARMONIC plotting functions (grid-on style).
 }

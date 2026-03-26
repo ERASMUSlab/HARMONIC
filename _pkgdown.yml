@@ -1,4 +1,4 @@
-url: https://erasmuslab.github.io/MANGO
+url: https://erasmuslab.github.io/HARMONIC
 destination: docs
 
 template:
@@ -9,18 +9,18 @@ template:
     link-color: "#F4A300"
 
 navbar:
-  title: "MANGO"
+  title: "HARMONIC"
   bg: "#F4A300"
   type: dark
   left:
     - text: "Home"
       href: index.html
     - text: "Install"
-      href: articles/MANGO-install.html
+      href: articles/HARMONIC-install.html
     - text: "Data Preprocessing & Analysis"
       menu:
         - text: "Overview"
-          href: articles/MANGO-intro.html
+          href: articles/HARMONIC-intro.html
         - text: "Single case"
           href: articles/single-case.html
         - text: "Multiple case"
@@ -28,7 +28,7 @@ navbar:
     - text: "Visualization"
       menu:
         - text: "Overview"
-          href: articles/MANGO-intro.html#visualization
+          href: articles/HARMONIC-intro.html#visualization
         - text: "Single case"
           href: articles/vis-single.html
         - text: "Multiple case"
@@ -38,8 +38,8 @@ navbar:
   right:
     - icon: fa-github
       aria-label: GitHub
-      href: https://github.com/ERASMUSlab/MANGO
+      href: https://github.com/ERASMUSlab/HARMONIC
 
 home:
-  title: "MANGO"
+  title: "HARMONIC"
   description: "Ontology/DAG-based GO term structuring and visualization for single and multi case enrichment analysis."

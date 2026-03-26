@@ -1,12 +1,12 @@
-# Compute MANGO tree scores for a single case
+# Compute HARMONIC tree scores for a single case
 
-Single-condition version of `MANGO_COMPARE`. Produces a one-column
+Single-condition version of `HARMONIC_COMPARE`. Produces a one-column
 comparison table for the single case.
 
 ## Usage
 
 ``` r
-MANGO_COMPARE_SINGLE(
+HARMONIC_COMPARE_SINGLE(
   input_TERMLISTING,
   filepath,
   fileTABLE_path,
@@ -29,7 +29,7 @@ MANGO_COMPARE_SINGLE(
 
 - fileTABLE_path:
 
-  Path to a table listing a single MANGO preprocessing file.
+  Path to a table listing a single HARMONIC preprocessing file.
 
 - DEG_list_name:
 
@@ -54,5 +54,5 @@ Writes `outputPATH`. Returns `NULL` invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_COMPARE_SINGLE))
+stopifnot(is.function(HARMONIC_COMPARE_SINGLE))
 ```

@@ -1,6 +1,6 @@
 ^LICENSE\.md$
 ^README\.Rmd$
-^MANGO\.BiocCheck$
+^HARMONIC\.BiocCheck$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$

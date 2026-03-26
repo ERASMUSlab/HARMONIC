@@ -1,12 +1,12 @@
-# MANGO multi-case circular plot (tree-level)
+# HARMONIC multi-case circular plot (tree-level)
 
-Draw a circular (polar) summary plot of MANGO trees across multiple
+Draw a circular (polar) summary plot of HARMONIC trees across multiple
 cases.
 
 ## Usage
 
 ``` r
-MANGO_TREE_cirPLOT_forMULTI(
+HARMONIC_TREE_cirPLOT_forMULTI(
   filepath,
   DEG_list_name,
   status,

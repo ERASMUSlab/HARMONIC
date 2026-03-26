@@ -1,4 +1,4 @@
-# Run the MANGO analysis pipeline
+# Run the HARMONIC analysis pipeline
 
 Orchestrates preprocessing (optional), term listing, comparison, and
 separation. Supports both single- and multi-condition workflows.
@@ -6,7 +6,7 @@ separation. Supports both single- and multi-condition workflows.
 ## Usage
 
 ``` r
-MANGO_ANALYSIS(
+HARMONIC_ANALYSIS(
   filepath,
   DEG_list_name,
   ref_genome,
@@ -74,9 +74,9 @@ Writes output files to disk. Returns `NULL` invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_ANALYSIS))
+stopifnot(is.function(HARMONIC_ANALYSIS))
 if (FALSE) { # \dontrun{
-MANGO_ANALYSIS(
+HARMONIC_ANALYSIS(
   filepath=".",
   DEG_list_name="input_DEG_list.txt",
   ref_genome="mm",

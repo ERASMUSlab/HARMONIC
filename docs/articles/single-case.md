@@ -1,8 +1,8 @@
-# MANGO-intro
+# HARMONIC-intro
 
 ``` r
 
-library(MANGO)
+library(HARMONIC)
 ```
 
     #> R version 4.4.3 (2025-02-28)
@@ -27,7 +27,7 @@ library(MANGO)
     #> [1] stats     graphics  grDevices utils     datasets  methods   base     
     #> 
     #> other attached packages:
-    #> [1] MANGO_0.99.0
+    #> [1] HARMONIC_0.99.0
     #> 
     #> loaded via a namespace (and not attached):
     #>  [1] gtable_0.3.6       jsonlite_2.0.0     dplyr_1.2.0        compiler_4.4.3    

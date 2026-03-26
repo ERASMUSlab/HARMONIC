@@ -1,13 +1,13 @@
-# Select significant MANGO terms within a condition range
+# Select significant HARMONIC terms within a condition range
 
-Filters MANGO comparison results to terms present in all selected
+Filters HARMONIC comparison results to terms present in all selected
 conditions (`condition_A:condition_B`) and exceeding an `FC` ratio
 against the remaining conditions.
 
 ## Usage
 
 ``` r
-MANGO_SEPERATE_forMULTI_range(
+HARMONIC_SEPERATE_forMULTI_range(
   input_COMPARE,
   fileTABLE_path,
   FC,
@@ -21,7 +21,7 @@ MANGO_SEPERATE_forMULTI_range(
 
 - input_COMPARE:
 
-  Path to the MANGO comparison table.
+  Path to the HARMONIC comparison table.
 
 - fileTABLE_path:
 
@@ -51,5 +51,5 @@ Writes `outputPATH`. Returns `NULL` invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_SEPERATE_forMULTI_range))
+stopifnot(is.function(HARMONIC_SEPERATE_forMULTI_range))
 ```

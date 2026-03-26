@@ -1,6 +1,6 @@
-# MANGO multi-case term bar plot (term-level)
+# HARMONIC multi-case term bar plot (term-level)
 
-Draw a bar plot of GO terms within a selected MANGO tree for multi-case
+Draw a bar plot of GO terms within a selected HARMONIC tree for multi-case
 results. The function supports three modes via `status`: `"common"`,
 `"specific"`, and `"DA"`. Bars represent the term score (tscore-like),
 dashed segments/points encode gene distribution ratio and median
@@ -10,7 +10,7 @@ logic).
 ## Usage
 
 ``` r
-MANGO_TERM_barPLOT_forMULTI(
+HARMONIC_TERM_barPLOT_forMULTI(
   filepath,
   DEG_list_name,
   status,

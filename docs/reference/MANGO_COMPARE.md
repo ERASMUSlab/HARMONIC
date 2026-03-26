@@ -1,13 +1,13 @@
-# Compute MANGO tree scores across multiple cases
+# Compute HARMONIC tree scores across multiple cases
 
-For each MANGO tree (term dependency string), maps to GO descriptions
+For each HARMONIC tree (term dependency string), maps to GO descriptions
 and calculates a per-condition score using rich factor and DEG
 fold-change information, producing a comparison matrix.
 
 ## Usage
 
 ``` r
-MANGO_COMPARE(
+HARMONIC_COMPARE(
   input_TERMLISTING,
   filepath,
   fileTABLE_path,
@@ -29,7 +29,7 @@ MANGO_COMPARE(
 
 - fileTABLE_path:
 
-  Path to a table listing MANGO preprocessing files (one per row).
+  Path to a table listing HARMONIC preprocessing files (one per row).
 
 - DEG_list_name:
 
@@ -50,5 +50,5 @@ Writes `outputPATH`. Returns `NULL` invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_COMPARE))
+stopifnot(is.function(HARMONIC_COMPARE))
 ```

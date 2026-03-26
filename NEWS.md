@@ -1,3 +1,3 @@
-# MANGO 0.99.0
+# HARMONIC 0.99.0
 
 * Initial CRAN submission.

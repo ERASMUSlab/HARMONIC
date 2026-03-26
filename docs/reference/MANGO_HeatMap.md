@@ -1,12 +1,12 @@
-# Draw a heatmap of MANGO results
+# Draw a heatmap of HARMONIC results
 
-Create a heatmap from MANGO output tables (MANGO_SEPERATE or
-MANGO_SEPERATE_forMULTI_range).
+Create a heatmap from HARMONIC output tables (HARMONIC_SEPERATE or
+HARMONIC_SEPERATE_forMULTI_range).
 
 ## Usage
 
 ``` r
-MANGO_HeatMap(
+HARMONIC_HeatMap(
   filepath,
   DEG_list_name,
   trends,
@@ -35,7 +35,7 @@ MANGO_HeatMap(
 - condition:
 
   "ALL", "SIG", or a specific condition index/value used in the last
-  column of MANGO_SEPERATE output.
+  column of HARMONIC_SEPERATE output.
 
 - width:
 
@@ -51,8 +51,8 @@ MANGO_HeatMap(
 
 - dynamic_analyisis:
 
-  "F" for single/multi heatmap using MANGO_SEPERATE, "T" for dynamic
-  analysis heatmap using MANGO_SEPERATE_forMULTI_range.
+  "F" for single/multi heatmap using HARMONIC_SEPERATE, "T" for dynamic
+  analysis heatmap using HARMONIC_SEPERATE_forMULTI_range.
 
 ## Value
 
@@ -61,9 +61,9 @@ A `pheatmap` object.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_HeatMap))
+stopifnot(is.function(HARMONIC_HeatMap))
 # \donttest{
-# MANGO_HeatMap(
+# HARMONIC_HeatMap(
 #   filepath = ".",
 #   DEG_list_name = "input_DEG_list.txt",
 #   trends = "UP",

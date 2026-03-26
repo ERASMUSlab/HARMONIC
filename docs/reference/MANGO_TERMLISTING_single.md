@@ -1,11 +1,11 @@
-# Build the MANGO term tree list for a single case
+# Build the HARMONIC term tree list for a single case
 
-Same as `MANGO_TERMLISTING` but operates on a single preprocessing file.
+Same as `HARMONIC_TERMLISTING` but operates on a single preprocessing file.
 
 ## Usage
 
 ``` r
-MANGO_TERMLISTING_single(
+HARMONIC_TERMLISTING_single(
   PASSED_RATIO,
   PASSED_NUM,
   similarity,
@@ -30,7 +30,7 @@ MANGO_TERMLISTING_single(
 
 - fileTABLE_path:
 
-  Path to a table listing a single MANGO preprocessing file.
+  Path to a table listing a single HARMONIC preprocessing file.
 
 - outputPATH:
 
@@ -43,5 +43,5 @@ Writes `outputPATH`. Returns `NULL` invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_TERMLISTING_single))
+stopifnot(is.function(HARMONIC_TERMLISTING_single))
 ```

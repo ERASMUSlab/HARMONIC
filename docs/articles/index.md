@@ -2,4 +2,4 @@
 
 ### All vignettes
 
-- [MANGO-intro](https://erasmuslab.github.io/MANGO/articles/MANGO-intro.md):
+- [HARMONIC-intro](https://erasmuslab.github.io/HARMONIC/articles/HARMONIC-intro.md):

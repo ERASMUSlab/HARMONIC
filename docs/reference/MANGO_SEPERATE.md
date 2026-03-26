@@ -1,6 +1,6 @@
-# Separate MANGO terms by condition specificity (with PASS/FAIL filtering)
+# Separate HARMONIC terms by condition specificity (with PASS/FAIL filtering)
 
-This function separates MANGO terms by condition using the comparison
+This function separates HARMONIC terms by condition using the comparison
 matrix, then applies additional filtering based on the number of matched
 GO terms per tree (\>= PASSED_NUM) for each condition and for
 non-separated terms.
@@ -8,7 +8,7 @@ non-separated terms.
 ## Usage
 
 ``` r
-MANGO_SEPERATE(
+HARMONIC_SEPERATE(
   input_COMPARE,
   fileTABLE_path,
   GOTABLE_path,
@@ -22,11 +22,11 @@ MANGO_SEPERATE(
 
 - input_COMPARE:
 
-  Path to MANGO_COMPARE output file.
+  Path to HARMONIC_COMPARE output file.
 
 - fileTABLE_path:
 
-  Path to MANGO_PREPROCESSING_list file (condition table).
+  Path to HARMONIC_PREPROCESSING_list file (condition table).
 
 - GOTABLE_path:
 
@@ -51,15 +51,15 @@ Writes a tab-delimited file to `outputPATH`. Returns NULL invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_SEPERATE))
+stopifnot(is.function(HARMONIC_SEPERATE))
 # \donttest{
-# MANGO_SEPERATE(
-#   input_COMPARE = "MANGO_COMPARE.txt",
-#   fileTABLE_path = "MANGO_PREPROCESSING_list.txt",
+# HARMONIC_SEPERATE(
+#   input_COMPARE = "HARMONIC_COMPARE.txt",
+#   fileTABLE_path = "HARMONIC_PREPROCESSING_list.txt",
 #   GOTABLE_path = "input_DEG_GO_list.txt",
 #   FC = 2,
 #   PASSED_NUM = 4,
-#   outputPATH = "MANGO_SEPERATE.txt"
+#   outputPATH = "HARMONIC_SEPERATE.txt"
 # )
 # }
 ```

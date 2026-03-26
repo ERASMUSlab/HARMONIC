@@ -1,6 +1,6 @@
-#' MANGO default plotting theme
+#' HARMONIC default plotting theme
 #'
-#' A ggplot2 theme used across MANGO plotting functions (grid-on style).
+#' A ggplot2 theme used across HARMONIC plotting functions (grid-on style).
 #' @param base_size Base font size used by the theme.
 #' @return A ggplot2 theme object.
 #' @export

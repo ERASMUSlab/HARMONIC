@@ -1,4 +1,4 @@
-# Build the MANGO term tree list across multiple cases
+# Build the HARMONIC term tree list across multiple cases
 
 Aggregates `total_Dependency` strings across preprocessing outputs,
 computes pairwise overlap ratio, and creates a tree/subtree mapping
@@ -7,7 +7,7 @@ based on a similarity threshold.
 ## Usage
 
 ``` r
-MANGO_TERMLISTING(
+HARMONIC_TERMLISTING(
   PASSED_RATIO,
   PASSED_NUM,
   similarity,
@@ -32,7 +32,7 @@ MANGO_TERMLISTING(
 
 - fileTABLE_path:
 
-  Path to a table listing MANGO preprocessing files (one per row).
+  Path to a table listing HARMONIC preprocessing files (one per row).
 
 - outputPATH:
 
@@ -45,5 +45,5 @@ Writes `outputPATH`. Returns `NULL` invisibly.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_TERMLISTING))
+stopifnot(is.function(HARMONIC_TERMLISTING))
 ```

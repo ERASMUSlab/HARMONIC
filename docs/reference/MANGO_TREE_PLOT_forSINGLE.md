@@ -1,13 +1,13 @@
-# Plot MANGO trees for a single condition
+# Plot HARMONIC trees for a single condition
 
-Visualize tree-level summaries from `MANGO_SEPERATE` output for a
+Visualize tree-level summaries from `HARMONIC_SEPERATE` output for a
 single-case analysis. Supports bar plot and circular (polar) plot
 styles.
 
 ## Usage
 
 ``` r
-MANGO_TREE_PLOT_forSINGLE(filepath, trends, width, height, plot, DEG_list_name)
+HARMONIC_TREE_PLOT_forSINGLE(filepath, trends, width, height, plot, DEG_list_name)
 ```
 
 ## Arguments
@@ -43,9 +43,9 @@ A ggplot object.
 ## Examples
 
 ``` r
-stopifnot(is.function(MANGO_TREE_PLOT_forSINGLE))
+stopifnot(is.function(HARMONIC_TREE_PLOT_forSINGLE))
 # \donttest{
-# MANGO_TREE_PLOT_forSINGLE(
+# HARMONIC_TREE_PLOT_forSINGLE(
 #   filepath = ".",
 #   trends = "UP",
 #   width = 10,

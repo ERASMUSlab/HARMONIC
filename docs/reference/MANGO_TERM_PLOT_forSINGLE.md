@@ -1,12 +1,12 @@
-# Plot MANGO terms for a single tree (bar or chord)
+# Plot HARMONIC terms for a single tree (bar or chord)
 
 Generate a bar plot (term scores) or a chord diagram (term–gene links)
-for a selected tree from MANGO single-case outputs.
+for a selected tree from HARMONIC single-case outputs.
 
 ## Usage
 
 ``` r
-MANGO_TERM_PLOT_forSINGLE(
+HARMONIC_TERM_PLOT_forSINGLE(
   filepath,
   DEG_list_name,
   plot,

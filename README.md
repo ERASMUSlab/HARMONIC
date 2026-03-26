@@ -1,25 +1,25 @@
-# MANGO: Multi-case Active oNtology-based GO organizer
-MANGO is an R package for Gene Ontology (GO) Biological Process enrichment analysis that reduces redundancy in top-ranked results by restructuring enriched terms into ontology-guided term trees based on the GO DAG. It defines and filters active trees using coverage/consistency criteria to suppress structurally driven false positives arising from hierarchical dependencies. MANGO supports single- and multiple- case study designs by integrating enrichment outputs across conditions, providing scoring options and visualization utilities to summarize common and condition-specific biological processes. Optional features include ORA-style soft filtering and fold-change-aware weighting for tree and term prioritization.
+# HARMONIC: Multi-case Active oNtology-based GO organizer
+HARMONIC is an R package for Gene Ontology (GO) Biological Process enrichment analysis that reduces redundancy in top-ranked results by restructuring enriched terms into ontology-guided term trees based on the GO DAG. It defines and filters active trees using coverage/consistency criteria to suppress structurally driven false positives arising from hierarchical dependencies. HARMONIC supports single- and multiple- case study designs by integrating enrichment outputs across conditions, providing scoring options and visualization utilities to summarize common and condition-specific biological processes. Optional features include ORA-style soft filtering and fold-change-aware weighting for tree and term prioritization.
 
-![Alt text](./FIG/MANGO_F1.jpg "MANGO")
+![Alt text](./FIG/HARMONIC_F1.jpg "HARMONIC")
 >- **Problem:** GO Biological Process enrichment results are often dominated by biologically similar top terms, and GO’s hierarchical DAG + gene sharing can create **structural false positives**, reducing interpretability and confidence.
->- **Solution (MANGO):** An analytical framework that reorganizes GO outputs into **ontology-informed term trees** and applies **structural filtering** based on **within-tree consistency**.
->- **Key idea 1 — Tree organizing:** MANGO groups similar terms into trees to reduce redundancy and compress results into interpretable units.
->- **Key idea 2 — Active-tree filtering:** MANGO suppresses isolated, single-term–driven signals using an **active-tree criterion**.
->- **Multiple-case support:** MANGO aligns results from multiple comparisons into a **shared tree structure** and classifies **common vs condition-specific** trees using **HWES** and relative signal strength across conditions.
+>- **Solution (HARMONIC):** An analytical framework that reorganizes GO outputs into **ontology-informed term trees** and applies **structural filtering** based on **within-tree consistency**.
+>- **Key idea 1 — Tree organizing:** HARMONIC groups similar terms into trees to reduce redundancy and compress results into interpretable units.
+>- **Key idea 2 — Active-tree filtering:** HARMONIC suppresses isolated, single-term–driven signals using an **active-tree criterion**.
+>- **Multiple-case support:** HARMONIC aligns results from multiple comparisons into a **shared tree structure** and classifies **common vs condition-specific** trees using **HWES** and relative signal strength across conditions.
 >- **Parameter recommendations:** A parameter search provides **input-size–specific recommended settings**.
 >- **Benchmarking:** Evaluated across **31 single-case analyses** against **ORA** and **GSEA** using **adjusted p-values**, **fraction of terms assigned**, and **rich factors** to assess interpretability.
 >- **Validation:** Demonstrated reproduction of reported signals across public datasets spanning **knockout**, **cancer**, **differentiation**, **dose–response**, and **cohort** designs.
 >- **Usability:** Provides **R-based visualization functions** for both single- and multiple-case settings to aid interpretation.
->- **Take-home:** MANGO reduces redundancy and structural false positives driven by the GO DAG, enabling **reproducible term-pattern summarization** for multi-comparison studies.
+>- **Take-home:** HARMONIC reduces redundancy and structural false positives driven by the GO DAG, enabling **reproducible term-pattern summarization** for multi-comparison studies.
 
 ## Installation
 
 ### Linux / macOS (Using conda OR micromamba at terminal)
 
 ```bash
-micromamba create -n MANGO
-micromamba activate MANGO
+micromamba create -n HARMONIC
+micromamba activate HARMONIC
 
 micromamba install -c conda-forge -c r -c bioconda -y \
 jupyter_core jupyter_client jupyterlab_pygments jupyter_server r-irkernel jupyterlab r=4.3.1
@@ -31,17 +31,17 @@ bioconductor-go.db bioconductor-keggrest bioconductor-fgsea bioconductor-deseq2 
 bioconductor-dose bioconductor-enrichplot bioconductor-clusterprofiler bioconductor-ggtree \
 bioconductor-org.mm.eg.db bioconductor-org.hs.eg.db
 
-mkdir path_to_MANGOanalysis
-wget -P path_to_MANGOanalysis https://github.com/user-attachments/files/25776389/MANGO_FORMAT.tar.gz
-### ex) wget -P /home/RNA/gitMANGO/ https://github.com/user-attachments/files/25776389/MANGO_FORMAT.tar.gz
+mkdir path_to_HARMONICanalysis
+wget -P path_to_HARMONICanalysis https://github.com/user-attachments/files/25776389/HARMONIC_FORMAT.tar.gz
+### ex) wget -P /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/25776389/HARMONIC_FORMAT.tar.gz
 
-cd path_to_MANGOanalysis
-pigz -dc -p 4 MANGO_FORMAT.tar.gz | tar -xf -
+cd path_to_HARMONICanalysis
+pigz -dc -p 4 HARMONIC_FORMAT.tar.gz | tar -xf -
 
-mv MANGO_FORMAT MANGO_project_name
-### ex) mv MANGO_FORMAT MANGO_DIFF
+mv HARMONIC_FORMAT HARMONIC_project_name
+### ex) mv HARMONIC_FORMAT HARMONIC_DIFF
 
-cd MANGO_project_name/MANGO
+cd HARMONIC_project_name/HARMONIC
 pwd
 ### result of pwd is filepath we use in R
 
@@ -55,9 +55,9 @@ cp path_to_input_countMATRIX RAWcount.txt
 
 ```r
 # install.packages("remotes")
-remotes::install_github("ERASMUSlab/MANGO")
+remotes::install_github("ERASMUSlab/HARMONIC")
 
-MANGO_ANALYSIS(filepath = "/home/RNA/gitMANGO/MANGO_DIFF/MANGO",
+HARMONIC_ANALYSIS(filepath = "/home/RNA/gitHARMONIC/HARMONIC_DIFF/HARMONIC",
                type = "broad",
                full_condition = c("DAY0","DAY4","DAY7","DAY10","DAY14","DAY21"),
                number_of_rep = c(3,3,3,6,3,3),
@@ -77,10 +77,10 @@ MANGO_ANALYSIS(filepath = "/home/RNA/gitMANGO/MANGO_DIFF/MANGO",
 ## Documentation
 
 Full documentation and tutorials:
-https://erasmuslab.github.io/MANGO
+https://erasmuslab.github.io/HARMONIC
 
 
 ## Citation
 
-If you use MANGO in your research, please cite:
-https://erasmuslab.github.io/MANGO/authors.html#citation
+If you use HARMONIC in your research, please cite:
+https://erasmuslab.github.io/HARMONIC/authors.html#citation
