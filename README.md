@@ -32,8 +32,8 @@ bioconductor-dose bioconductor-enrichplot bioconductor-clusterprofiler bioconduc
 bioconductor-org.mm.eg.db bioconductor-org.hs.eg.db
 
 mkdir path_to_HARMONICanalysis
-wget -P path_to_HARMONICanalysis https://github.com/user-attachments/files/25776389/HARMONIC_FORMAT.tar.gz
-### ex) wget -P /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/25776389/HARMONIC_FORMAT.tar.gz
+wget -P path_to_HARMONICanalysis https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz
+### ex) wget -P /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz
 
 cd path_to_HARMONICanalysis
 pigz -dc -p 4 HARMONIC_FORMAT.tar.gz | tar -xf -
