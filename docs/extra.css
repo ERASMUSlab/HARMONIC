@@ -12,3 +12,40 @@ main, .container[role="main"] {
 }
 
 /* if navbar is not fixed, padding-top won't hurt too much */
+
+/* Fix disappearing navbar text when hovering/opening dropdown menus */
+.navbar .nav-link,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link:active,
+.navbar .nav-link.show,
+.navbar .nav-link[aria-expanded="true"],
+.navbar .dropdown-toggle,
+.navbar .dropdown-toggle:hover,
+.navbar .dropdown-toggle:focus,
+.navbar .dropdown-toggle:active,
+.navbar .dropdown-toggle.show,
+.navbar .dropdown-toggle[aria-expanded="true"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Dropdown menu readability */
+.navbar .dropdown-menu {
+  background-color: #212529 !important;
+}
+
+.navbar .dropdown-menu .dropdown-item,
+.navbar .dropdown-menu .dropdown-item:visited {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus,
+.navbar .dropdown-menu .dropdown-item:active {
+  color: #ffffff !important;
+  background-color: #F4A300 !important;
+  opacity: 1 !important;
+}
