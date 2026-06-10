@@ -402,3 +402,33 @@ div.csl-indent {
   color: #ffffff !important;
   opacity: 1 !important;
 }
+
+/* Keep dropdown menu text readable */
+.navbar .dropdown-menu {
+  background-color: #212529 !important;
+}
+
+.navbar .dropdown-menu .dropdown-item,
+.navbar .dropdown-menu .dropdown-item:visited {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus,
+.navbar .dropdown-menu .dropdown-item:active {
+  color: #ffffff !important;
+  background-color: #F4A300 !important;
+  opacity: 1 !important;
+}
+
+/* Keep top navbar text visible */
+.navbar .nav-link,
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .navbar-brand,
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
