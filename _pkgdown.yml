@@ -19,8 +19,6 @@ navbar:
       href: articles/HARMONIC-install.html
     - text: "Data Preprocessing & Analysis"
       menu:
-        - text: "Overview"
-          href: articles/HARMONIC-intro.html
         - text: "Single case"
           href: articles/single-case.html
         - text: "Multiple case"
