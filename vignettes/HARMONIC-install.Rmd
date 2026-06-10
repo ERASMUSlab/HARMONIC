@@ -1,0 +1,59 @@
+---
+title: "Installation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Installation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Installation
+
+### Linux / macOS (Using conda OR micromamba at terminal)
+
+```{bash, eval=FALSE}
+micromamba create -n HARMONIC
+micromamba activate HARMONIC
+```
+```{bash, eval=FALSE}
+micromamba install -c conda-forge -c r -c bioconda -y \
+jupyter_core jupyter_client jupyterlab_pygments jupyter_server r-irkernel jupyterlab r=4.3.1
+```
+```{bash, eval=FALSE}
+micromamba install -c conda-forge -c r -c bioconda -y \
+r-png r-data.table r-systemfonts r-gdtools r-ggforce r-ggiraph bioconductor-xvector bioconductor-sparsearray \
+bioconductor-biostrings bioconductor-delayedarray bioconductor-summarizedexperiment bioconductor-annotationdbi \
+bioconductor-go.db bioconductor-keggrest bioconductor-fgsea bioconductor-deseq2 bioconductor-gosemsim pigz \
+bioconductor-dose bioconductor-enrichplot bioconductor-clusterprofiler bioconductor-ggtree \
+bioconductor-org.mm.eg.db bioconductor-org.hs.eg.db
+```
+```{bash, eval=FALSE}
+mkdir path_to_HARMONICanalysis
+wget -P path_to_HARMONICanalysis https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz
+### ex) wget -P /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz
+```
+```{bash, eval=FALSE}
+cd path_to_HARMONICanalysis
+pigz -dc -p 4 HARMONIC_FORMAT.tar.gz | tar -xf -
+```
+```{bash, eval=FALSE}
+mv HARMONIC_FORMAT HARMONIC_project_name
+### ex) mv HARMONIC_FORMAT HARMONIC_DIFF
+```
+```{bash, eval=FALSE}
+cd HARMONIC_project_name/HARMONIC
+pwd
+### result of pwd is filepath we use in R
+```
+```{bash, eval=FALSE}
+cd count
+cp path_to_input_countMATRIX RAWcount.txt
+### ex) cp RAWcount_DIFF.txt RAWcount.txt
+```
