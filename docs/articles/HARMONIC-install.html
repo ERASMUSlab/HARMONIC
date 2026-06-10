@@ -73,35 +73,69 @@
 
     
     
+<style type="text/css">
+pre {
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.sourceCode {
+  margin-bottom: 1.6rem;
+}
+</style>
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+<h2 id="linux-macos-using-conda-or-micromamba-at-terminal">Linux / macOS (Using conda OR micromamba at terminal)<a class="anchor" aria-label="anchor" href="#linux-macos-using-conda-or-micromamba-at-terminal"></a>
 </h2>
 <div class="section level3">
-<h3 id="linux-macos-using-conda-or-micromamba-at-terminal">Linux / macOS (Using conda OR micromamba at terminal)<a class="anchor" aria-label="anchor" href="#linux-macos-using-conda-or-micromamba-at-terminal"></a>
+<h3 id="create-a-conda-or-micromamba-environment">1. Create a conda or micromamba environment<a class="anchor" aria-label="anchor" href="#create-a-conda-or-micromamba-environment"></a>
 </h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">micromamba</span> create <span class="at">-n</span> HARMONIC</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">micromamba</span> activate HARMONIC</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="install-r-and-jupyter-dependencies">2. Install R and Jupyter dependencies<a class="anchor" aria-label="anchor" href="#install-r-and-jupyter-dependencies"></a>
+</h3>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">micromamba</span> install <span class="at">-c</span> conda-forge <span class="at">-c</span> r <span class="at">-c</span> bioconda <span class="at">-y</span> <span class="dt">\</span></span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>jupyter_core jupyter_client jupyterlab_pygments jupyter_server r-irkernel jupyterlab r=4.3.1</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="install-required-r-and-bioconductor-packages">3. Install required R and Bioconductor packages<a class="anchor" aria-label="anchor" href="#install-required-r-and-bioconductor-packages"></a>
+</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">micromamba</span> install <span class="at">-c</span> conda-forge <span class="at">-c</span> r <span class="at">-c</span> bioconda <span class="at">-y</span> <span class="dt">\</span></span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>r-png r-data.table r-systemfonts r-gdtools r-ggforce r-ggiraph bioconductor-xvector bioconductor-sparsearray <span class="dt">\</span></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>bioconductor-biostrings bioconductor-delayedarray bioconductor-summarizedexperiment bioconductor-annotationdbi <span class="dt">\</span></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>bioconductor-go.db bioconductor-keggrest bioconductor-fgsea bioconductor-deseq2 bioconductor-gosemsim pigz <span class="dt">\</span></span>
 <span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>bioconductor-dose bioconductor-enrichplot bioconductor-clusterprofiler bioconductor-ggtree <span class="dt">\</span></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>bioconductor-org.mm.eg.db bioconductor-org.hs.eg.db</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="download-the-harmonic-analysis-template">4. Download the HARMONIC analysis template<a class="anchor" aria-label="anchor" href="#download-the-harmonic-analysis-template"></a>
+</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">mkdir</span> path_to_HARMONICanalysis</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-P</span> path_to_HARMONICanalysis https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">### ex) wget -P /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">cd</span> path_to_HARMONICanalysis</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">pigz</span> <span class="at">-dc</span> <span class="at">-p</span> 4 HARMONIC_FORMAT.tar.gz <span class="kw">|</span> <span class="fu">tar</span> <span class="at">-xf</span> <span class="at">-</span></span></code></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">mv</span> HARMONIC_FORMAT HARMONIC_project_name</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co">### ex) mv HARMONIC_FORMAT HARMONIC_DIFF</span></span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">cd</span> HARMONIC_project_name/HARMONIC</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">### result of pwd is filepath we use in R</span></span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">cd</span> count</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">cp</span> path_to_input_countMATRIX RAWcount.txt</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">### ex) cp RAWcount_DIFF.txt RAWcount.txt</span></span></code></pre></div>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="bu">cd</span> path_to_HARMONICanalysis</span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="ex">pigz</span> <span class="at">-dc</span> <span class="at">-p</span> 4 HARMONIC_FORMAT.tar.gz <span class="kw">|</span> <span class="fu">tar</span> <span class="at">-xf</span> <span class="at">-</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="fu">mv</span> HARMONIC_FORMAT HARMONIC_project_name</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="prepare-the-input-count-matrix">5. Prepare the input count matrix<a class="anchor" aria-label="anchor" href="#prepare-the-input-count-matrix"></a>
+</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">cd</span> HARMONIC_project_name/HARMONIC</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">pwd</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">### result of pwd is filepath we use in R</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="bu">cd</span> count</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="fu">cp</span> path_to_input_countMATRIX RAWcount.txt</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="fu">mkdir</span> /home/RNA/gitHARMONIC</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-P</span> /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/26292175/HARMONIC_FORMAT.tar.gz</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="bu">cd</span> /home/RNA/gitHARMONIC</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="ex">pigz</span> <span class="at">-dc</span> <span class="at">-p</span> 4 HARMONIC_FORMAT.tar.gz <span class="kw">|</span> <span class="fu">tar</span> <span class="at">-xf</span> <span class="at">-</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a><span class="fu">mv</span> HARMONIC_FORMAT HARMONIC_DIFF</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a><span class="bu">cd</span> count</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a><span class="fu">cp</span> RAWcount_DIFF.txt RAWcount.txt</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
