@@ -83,4 +83,11 @@ cd count
 cp RAWcount_DIFF.txt RAWcount.txt
 ```
 
+## R code
+### 6. Install the HARMONIC R package
+```{bash, eval=FALSE}
+install.packages("remotes")
+remotes::install_github("ERASMUSlab/HARMONIC") 
+library(HARMONIC)
+```
 
