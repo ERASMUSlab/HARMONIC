@@ -79,7 +79,7 @@ wget -P /home/RNA/gitHARMONIC/ https://github.com/user-attachments/files/2629217
 cd /home/RNA/gitHARMONIC
 pigz -dc -p 4 HARMONIC_FORMAT.tar.gz | tar -xf -
 mv HARMONIC_FORMAT HARMONIC_DIFF
-cd count
+cd HARMONIC_DIFF/HARMONIC/count
 cp RAWcount_DIFF.txt RAWcount.txt
 ```
 
