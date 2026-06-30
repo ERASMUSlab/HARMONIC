@@ -53,7 +53,7 @@ library(haRmonic)
 packageVersion("clusterProfiler")
 ```
 
-### 2. Preprocessing & analysis
+### 2. Preprocessing & Analysis
 ```{r, eval=FALSE}
 HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   type = "standard",
@@ -66,6 +66,22 @@ HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   PASSED_RATIO = 20,
                   PASSED_NUM = 2,
                   similarity = 70,
+                  preprocessing = "T")
+```
+
+### 3. Modificate parameters
+```{r, eval=FALSE}
+HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                  type = "standard",
+                  full_condition = c("DAY0","DAY4","DAY7","DAY10","DAY14","DAY21"),
+                  number_of_rep = c(3, 3, 3, 6, 3, 3),
+                  DEG_list_name = "input_DEG_list.txt",
+                  mango_design = c("DAY4_DAY0_UP"),
+                  core = 1,
+                  ref_genome = "mm",
+                  PASSED_RATIO = 20,
+                  PASSED_NUM = 3,
+                  similarity = 50,
                   preprocessing = "F")
 ```
 

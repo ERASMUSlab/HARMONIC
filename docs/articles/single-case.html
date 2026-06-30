@@ -102,7 +102,7 @@ pre {
 <pre><code>[1] '4.14.6'</code></pre>
 </div>
 <div class="section level3">
-<h3 id="preprocessing-analysis">2. Preprocessing &amp; analysis<a class="anchor" aria-label="anchor" href="#preprocessing-analysis"></a>
+<h3 id="preprocessing-analysis">2. Preprocessing &amp; Analysis<a class="anchor" aria-label="anchor" href="#preprocessing-analysis"></a>
 </h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_ANALYSIS.html">HARMONIC_ANALYSIS</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
@@ -116,6 +116,23 @@ pre {
 <span>                  PASSED_RATIO <span class="op">=</span> <span class="fl">20</span>,</span>
 <span>                  PASSED_NUM <span class="op">=</span> <span class="fl">2</span>,</span>
 <span>                  similarity <span class="op">=</span> <span class="fl">70</span>,</span>
+<span>                  preprocessing <span class="op">=</span> <span class="st">"T"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="modificate-parameters">3. Modificate parameters<a class="anchor" aria-label="anchor" href="#modificate-parameters"></a>
+</h3>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_ANALYSIS.html">HARMONIC_ANALYSIS</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span>                  type <span class="op">=</span> <span class="st">"standard"</span>,</span>
+<span>                  full_condition <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"DAY0"</span>,<span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span><span class="op">)</span>,</span>
+<span>                  number_of_rep <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">6</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>                  DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span>                  mango_design <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"DAY4_DAY0_UP"</span><span class="op">)</span>,</span>
+<span>                  core <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                  ref_genome <span class="op">=</span> <span class="st">"mm"</span>,</span>
+<span>                  PASSED_RATIO <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>                  PASSED_NUM <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>                  similarity <span class="op">=</span> <span class="fl">50</span>,</span>
 <span>                  preprocessing <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
