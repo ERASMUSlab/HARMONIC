@@ -52,8 +52,24 @@ packageVersion("clusterProfiler")
 library(haRmonic)
 packageVersion("clusterProfiler")
 ```
-
 ### 2. Preprocessing & Analysis
+
+`HARMONIC_ANALYSIS()` runs the full preprocessing and enrichment workflow in a
+single call. The main parameters are:
+
+- `filepath` — path to the HARMONIC project directory (the `pwd` result from setup)
+- `type` — analysis mode: `"standard"` (p < 0.05, fold change ≥ 2) or `"broad"` (p < 0.05, fold change ≥ 1.5)
+- `full_condition` — all experimental conditions, in order
+- `number_of_rep` — number of replicates per condition (must match `full_condition` in length)
+- `DEG_list_name` — file name of the input DEG list
+- `mango_design` — the comparison(s) to analyze, named as `A_B_UP` for genes up in A vs B (e.g. `"DAY4_DAY0_UP"`)
+- `core` — number of CPU cores to use (increase for faster runs on multi-core machines)
+- `ref_genome` — reference genome (`"mm"` for mouse, `"hs"` for human)
+- `PASSED_RATIO` — minimum hit ratio (%) for an active tree to pass
+- `PASSED_NUM` — minimum number of hit terms for an active tree to pass
+- `similarity` — similarity threshold (%) for merging redundant terms
+- `preprocessing` — whether to run preprocessing (`"T"` to run, `"F"` to skip)
+
 ```{r, eval=FALSE}
 HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   type = "standard",

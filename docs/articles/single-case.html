@@ -104,6 +104,47 @@ pre {
 <div class="section level3">
 <h3 id="preprocessing-analysis">2. Preprocessing &amp; Analysis<a class="anchor" aria-label="anchor" href="#preprocessing-analysis"></a>
 </h3>
+<p><code><a href="../reference/MANGO_ANALYSIS.html">HARMONIC_ANALYSIS()</a></code> runs the full preprocessing and
+enrichment workflow in a single call. The main parameters are:</p>
+<ul>
+<li>
+<code>filepath</code> — path to the HARMONIC project directory (the
+<code>pwd</code> result from setup)</li>
+<li>
+<code>type</code> — analysis mode: <code>"standard"</code> (p &lt;
+0.05, fold change ≥ 2) or <code>"broad"</code> (p &lt; 0.05, fold change
+≥ 1.5)</li>
+<li>
+<code>full_condition</code> — all experimental conditions, in
+order</li>
+<li>
+<code>number_of_rep</code> — number of replicates per condition
+(must match <code>full_condition</code> in length)</li>
+<li>
+<code>DEG_list_name</code> — file name of the input DEG list</li>
+<li>
+<code>mango_design</code> — the comparison(s) to analyze, named as
+<code>A_B_UP</code> for genes up in A vs B
+(e.g. <code>"DAY4_DAY0_UP"</code>)</li>
+<li>
+<code>core</code> — number of CPU cores to use (increase for faster
+runs on multi-core machines)</li>
+<li>
+<code>ref_genome</code> — reference genome (<code>"mm"</code> for
+mouse, <code>"hs"</code> for human)</li>
+<li>
+<code>PASSED_RATIO</code> — minimum hit ratio (%) for an active tree
+to pass</li>
+<li>
+<code>PASSED_NUM</code> — minimum number of hit terms for an active
+tree to pass</li>
+<li>
+<code>similarity</code> — similarity threshold (%) for merging
+redundant terms</li>
+<li>
+<code>preprocessing</code> — whether to run preprocessing
+(<code>"T"</code> to run, <code>"F"</code> to skip)</li>
+</ul>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_ANALYSIS.html">HARMONIC_ANALYSIS</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
 <span>                  type <span class="op">=</span> <span class="st">"standard"</span>,</span>
