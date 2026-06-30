@@ -28,7 +28,7 @@ pre {
 
 ### 1. Load the HARMONIC R package
 
-```{r, eval=FALSE}
+```{r}
 # install.packages("remotes")
 # remotes::install_github("ERASMUSlab/HARMONIC")
 
@@ -36,9 +36,20 @@ pre {
 # install.packages("./clusterProfiler_4.14.6.tar.gz",
 #                  repos = NULL,
 #                  type  = "source")
+
+library(haRmonic)
+packageVersion("clusterProfiler")
 ```
 
 ```{r, echo=FALSE, comment=""}
+# install.packages("remotes")
+# remotes::install_github("ERASMUSlab/HARMONIC")
+
+# For exact reproducibility, pin clusterProfiler to the validated version:
+# install.packages("./clusterProfiler_4.14.6.tar.gz",
+#                  repos = NULL,
+#                  type  = "source")
+
 library(haRmonic)
 packageVersion("clusterProfiler")
 ```
