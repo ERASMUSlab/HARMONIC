@@ -123,7 +123,7 @@ consistently active over a trajectory (e.g. a differentiation time course)
 rather than appearing in only one comparison.
 
 - `condition = c(1, 3)` — the range of conditions (by index) to scan for commonly detected trees
-- `dynamic_analyㅑsis = "T"` — enable dynamic analysis (`"F"` to disable)
+- `dynamic_analyisis = "T"` — enable dynamic analysis (`"F"` to disable)
 
 ```{r, eval=FALSE}
 HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
