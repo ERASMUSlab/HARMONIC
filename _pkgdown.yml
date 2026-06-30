@@ -3,7 +3,7 @@ destination: docs
 
 authors:
   sidebar:
-    roles: []
+    roles: [cre]
 
 template:
   bootstrap: 5
