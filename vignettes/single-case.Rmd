@@ -1,0 +1,45 @@
+---
+title: "Single-case preprocessing & analysis"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Single-case analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{css, echo=FALSE}
+pre {
+  margin-top: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.sourceCode {
+  margin-bottom: 1.6rem;
+}
+```
+## R code
+
+### 1. Load the HARMONIC R package
+
+```{r, eval=FALSE}
+# install.packages("remotes")
+# remotes::install_github("ERASMUSlab/HARMONIC")
+
+# For exact reproducibility, pin clusterProfiler to the validated version:
+# install.packages("./clusterProfiler_4.14.6.tar.gz",
+#                  repos = NULL,
+#                  type  = "source")
+```
+
+```{r}
+library(haRmonic)
+packageVersion("clusterProfiler")
+```
+
