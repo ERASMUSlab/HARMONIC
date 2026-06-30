@@ -1,10 +1,6 @@
 url: https://erasmuslab.github.io/HARMONIC
 destination: docs
 
-authors:
-  sidebar:
-    roles: [cre]
-
 template:
   bootstrap: 5
   bootswatch: flatly
@@ -29,6 +25,8 @@ navbar:
           href: articles/multi-case.html
     - text: "Visualization"
       menu:
+        - text: "Overview"
+          href: articles/HARMONIC-intro.html#visualization
         - text: "Single case"
           href: articles/vis-single.html
         - text: "Multiple case"
