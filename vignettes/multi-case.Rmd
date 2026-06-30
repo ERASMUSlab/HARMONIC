@@ -110,7 +110,7 @@ HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   PASSED_RATIO = 25,   # changed from 20
                   PASSED_NUM = 3,      # changed from 2
                   similarity = 50,     # changed from 70
-		  FC = 1.5,            # changed from 2
+                  FC = 1.5,            # changed from 2
                   preprocessing = "F") # changed from "T"
 ```
 
