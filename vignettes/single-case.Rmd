@@ -69,7 +69,16 @@ HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   preprocessing = "T")
 ```
 
-### 3. Modificate parameters
+### 3. Modify parameters
+
+Key parameters can be adjusted depending on your design. For example, to apply
+stricter filtering and relaxed redundancy merging:
+
+- `PASSED_RATIO = 25` — require a higher hit ratio per active tree
+- `PASSED_NUM = 3` — require more hit terms per active tree
+- `similarity = 50` — merge terms at a lower similarity threshold
+- `preprocessing = "F"` — skip preprocessing if already run
+
 ```{r, eval=FALSE}
 HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   type = "standard",
@@ -79,9 +88,9 @@ HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   mango_design = c("DAY4_DAY0_UP"),
                   core = 1,
                   ref_genome = "mm",
-                  PASSED_RATIO = 20,
-                  PASSED_NUM = 3,
-                  similarity = 50,
-                  preprocessing = "F")
+                  PASSED_RATIO = 25,   # changed from 20
+                  PASSED_NUM = 3,      # changed from 2
+                  similarity = 50,     # changed from 70
+                  preprocessing = "F") # changed from "T"
 ```
 
