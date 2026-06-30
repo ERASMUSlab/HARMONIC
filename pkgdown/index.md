@@ -1,6 +1,5 @@
 ![](man/figures/HARMONIC_BANNER.jpg)
 
-## **HARMONIC**
 
 HARMONIC is an R package for Gene Ontology (GO) Biological Process (BP) enrichment analysis that helps reduce redundancy and improve interpretability of top-ranked results. Instead of reporting long lists of highly overlapping terms, HARMONIC restructures enriched terms into **ontology-guided term trees** using the GO DAG, enabling compact summaries of biological signals.
 
@@ -19,8 +18,3 @@ This release provides the following key features:
   HARMONIC provides plotting functions to summarize active trees and term–gene relationships, including single- and multiple-case views for interpretation and reporting.
 
 
-Install: [Install](articles/HARMONIC-install.html)  
-
-Data Preprocessing & Analysis: [Single case & Multiple case](articles/HARMONIC-intro.html)
-
-Visualization: [Single case & Multiple case](articles/HARMONIC-intro.html)
