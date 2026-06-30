@@ -27,7 +27,6 @@ pre {
 ## R code
 
 ### 1. Load the HARMONIC R package
-
 ```{r}
 # install.packages("remotes")
 # remotes::install_github("ERASMUSlab/HARMONIC")
