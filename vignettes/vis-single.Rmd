@@ -88,3 +88,62 @@ HARMONIC_TREE_PLOT_forSINGLE(filepath = "../HARMONIC_DIFF/HARMONIC/",
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("figures/vis-single-treeplot-cir.png")
 ```
+
+### 2.1. Term plot ver. BAR
+
+`HARMONIC_TERM_PLOT_forSINGLE()` expands a single active tree into its
+individual GO terms, showing each term's Tscore and gene distribution ratio.
+Select the tree to expand with `clusternum` (matching the tree number in the
+tree plot). Key parameters:
+
+- `filepath` — path to the analysis output directory
+- `DEG_list_name` — file name of the input DEG list
+- `plot` — plot style (`"bar"` or `"cir"`)
+- `trends` — direction of change (`"UP"` or `"DOWN"`)
+- `clusternum` — the tree number to expand (matches the tree plot)
+- `width`, `height` — output figure size (in inches)
+- `LABEL` — title displayed on the plot
+- `lfc_leng` — color range for the fold-change scale (applies to the `"cir"` layout)
+
+```{r, eval=FALSE}
+HARMONIC_TERM_PLOT_forSINGLE(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                             DEG_list_name = "input_DEG_list.txt",
+                             plot = "bar",
+                             trends = "UP",
+                             clusternum = 2,
+                             width = 11,
+                             height = 5,
+                             LABEL = "DAY4 vs DAY0 result")
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-single-termplot.png")
+```
+
+### 2.2. Term plot ver. CIR
+
+Setting `plot = "cir"` renders the term–gene relationships of the selected tree
+as a chord diagram: GO terms on one side, their associated genes on the other,
+with ribbons linking each gene to the terms it belongs to. This reveals which
+genes drive the enrichment of each biological process within the tree.
+
+- `clusternum` — the tree number to expand (matches the tree plot)
+- `lfc_leng` — color range for the fold-change scale (used in the `"cir"` layout)
+
+(other parameters as in section 2.1)
+
+```{r, eval=FALSE}
+HARMONIC_TERM_PLOT_forSINGLE(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                             DEG_list_name = "input_DEG_list.txt",
+                             plot = "cir",
+                             trends = "UP",
+                             clusternum = 2,
+                             width = 13,
+                             height = 7,
+                             LABEL = "DAY4 vs DAY0 result",
+                             lfc_leng = 2)
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-single-termplot-cir.png")
+```

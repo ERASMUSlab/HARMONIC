@@ -151,6 +151,77 @@ with tree numbers shown at the center.</p>
 <span>                             DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-single-treeplot-cir.png" class="r-plt" alt="" width="100%"></p>
 </div>
+<div class="section level3">
+<h3 id="term-plot-ver--bar">2.1. Term plot ver. BAR<a class="anchor" aria-label="anchor" href="#term-plot-ver--bar"></a>
+</h3>
+<p><code><a href="../reference/MANGO_TERM_PLOT_forSINGLE.html">HARMONIC_TERM_PLOT_forSINGLE()</a></code> expands a single active
+tree into its individual GO terms, showing each term’s Tscore and gene
+distribution ratio. Select the tree to expand with
+<code>clusternum</code> (matching the tree number in the tree plot). Key
+parameters:</p>
+<ul>
+<li>
+<code>filepath</code> — path to the analysis output directory</li>
+<li>
+<code>DEG_list_name</code> — file name of the input DEG list</li>
+<li>
+<code>plot</code> — plot style (<code>"bar"</code> or
+<code>"cir"</code>)</li>
+<li>
+<code>trends</code> — direction of change (<code>"UP"</code> or
+<code>"DOWN"</code>)</li>
+<li>
+<code>clusternum</code> — the tree number to expand (matches the
+tree plot)</li>
+<li>
+<code>width</code>, <code>height</code> — output figure size (in
+inches)</li>
+<li>
+<code>LABEL</code> — title displayed on the plot</li>
+<li>
+<code>lfc_leng</code> — color range for the fold-change scale
+(applies to the <code>"cir"</code> layout)</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_TERM_PLOT_forSINGLE.html">HARMONIC_TERM_PLOT_forSINGLE</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span>                             DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span>                             plot <span class="op">=</span> <span class="st">"bar"</span>,</span>
+<span>                             trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
+<span>                             clusternum <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                             width <span class="op">=</span> <span class="fl">11</span>,</span>
+<span>                             height <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>                             LABEL <span class="op">=</span> <span class="st">"DAY4 vs DAY0 result"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="figures/vis-single-termplot.png" class="r-plt" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="term-plot-ver--cir">2.2. Term plot ver. CIR<a class="anchor" aria-label="anchor" href="#term-plot-ver--cir"></a>
+</h3>
+<p>Setting <code>plot = "cir"</code> renders the term–gene relationships
+of the selected tree as a chord diagram: GO terms on one side, their
+associated genes on the other, with ribbons linking each gene to the
+terms it belongs to. This reveals which genes drive the enrichment of
+each biological process within the tree.</p>
+<ul>
+<li>
+<code>clusternum</code> — the tree number to expand (matches the
+tree plot)</li>
+<li>
+<code>lfc_leng</code> — color range for the fold-change scale (used
+in the <code>"cir"</code> layout)</li>
+</ul>
+<p>(other parameters as in section 2.1)</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_TERM_PLOT_forSINGLE.html">HARMONIC_TERM_PLOT_forSINGLE</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span>                             DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span>                             plot <span class="op">=</span> <span class="st">"cir"</span>,</span>
+<span>                             trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
+<span>                             clusternum <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>                             width <span class="op">=</span> <span class="fl">13</span>,</span>
+<span>                             height <span class="op">=</span> <span class="fl">7</span>,</span>
+<span>                             LABEL <span class="op">=</span> <span class="st">"DAY4 vs DAY0 result"</span>,</span>
+<span>                             lfc_leng <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<p><img src="figures/vis-single-termplot-cir.png" class="r-plt" alt="" width="100%"></p>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
