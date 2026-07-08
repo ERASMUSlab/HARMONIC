@@ -117,3 +117,65 @@ HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMO
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("figures/vis-multi-heatmap-dynamic.png")
 ```
+
+### 2.1. Tree plot ver.Specific
+
+`HARMONIC_TREE_cirPLOT_forMULTI()` shows the active trees of a multiple-case
+analysis in a circular layout, where each wedge is a tree and the concentric
+rings represent the successive conditions (e.g. DAY4 → DAY21). This reveals how
+each tree's signal changes across the trajectory. Key parameters:
+
+- `filepath` — path to the multiple-case analysis output directory
+- `DEG_list_name` — file name of the input DEG list
+- `status` — which trees to show (`"specific"` for condition-specific trees)
+- `trends` — direction of change (`"UP"` or `"DOWN"`)
+- `LABEL` — condition labels, in order
+- `project` — project name shown at the plot center
+- `condition` — reference condition index
+- `tree_size`, `label_size`, `project_size` — font/element sizes
+- `width`, `height` — output figure size (in inches)
+
+```{r, eval=FALSE}
+HARMONIC_TREE_cirPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "specific",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               project = "Differentiation",
+                               condition = 1,
+                               tree_size = 7,
+                               label_size = 3,
+                               project_size = 10,
+                               width = 14,
+                               height = 12)
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-treeplot-cir.png")
+```
+
+### 2.2. Term plot ver.Specific
+
+`HARMONIC_TERM_barPLOT_forMULTI()` expands a selected tree (via `clusternum`)
+into its individual GO terms for the multiple-case design, showing each term's
+Tscore and gene distribution ratio.
+
+- `status` — which trees to show (`"specific"`)
+- `condition` — reference condition index
+- `clusternum` — the tree number to expand (matches the tree plot)
+
+```{r, eval=FALSE}
+HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "specific",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               condition = 1,
+                               clusternum = 12,
+                               width = 10,
+                               height = 4)
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-termplot-bar.png")
+```

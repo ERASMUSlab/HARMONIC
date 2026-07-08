@@ -176,6 +176,83 @@ full heatmap above.</p>
 <span>                 dynamic_analyisis <span class="op">=</span> <span class="st">"T"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-multi-heatmap-dynamic.png" class="r-plt" alt="" width="100%"></p>
 </div>
+<div class="section level3">
+<h3 id="tree-plot-ver-specific">2.1. Tree plot ver.Specific<a class="anchor" aria-label="anchor" href="#tree-plot-ver-specific"></a>
+</h3>
+<p><code><a href="../reference/MANGO_TREE_cirPLOT_forMULTI.html">HARMONIC_TREE_cirPLOT_forMULTI()</a></code> shows the active trees
+of a multiple-case analysis in a circular layout, where each wedge is a
+tree and the concentric rings represent the successive conditions
+(e.g. DAY4 → DAY21). This reveals how each tree’s signal changes across
+the trajectory. Key parameters:</p>
+<ul>
+<li>
+<code>filepath</code> — path to the multiple-case analysis output
+directory</li>
+<li>
+<code>DEG_list_name</code> — file name of the input DEG list</li>
+<li>
+<code>status</code> — which trees to show (<code>"specific"</code>
+for condition-specific trees)</li>
+<li>
+<code>trends</code> — direction of change (<code>"UP"</code> or
+<code>"DOWN"</code>)</li>
+<li>
+<code>LABEL</code> — condition labels, in order</li>
+<li>
+<code>project</code> — project name shown at the plot center</li>
+<li>
+<code>condition</code> — reference condition index</li>
+<li>
+<code>tree_size</code>, <code>label_size</code>,
+<code>project_size</code> — font/element sizes</li>
+<li>
+<code>width</code>, <code>height</code> — output figure size (in
+inches)</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_TREE_cirPLOT_forMULTI.html">HARMONIC_TREE_cirPLOT_forMULTI</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span>                               DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span>                               status <span class="op">=</span> <span class="st">"specific"</span>,</span>
+<span>                               trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
+<span>                               LABEL <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span><span class="op">)</span>,</span>
+<span>                               project <span class="op">=</span> <span class="st">"Differentiation"</span>,</span>
+<span>                               condition <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                               tree_size <span class="op">=</span> <span class="fl">7</span>,</span>
+<span>                               label_size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>                               project_size <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>                               width <span class="op">=</span> <span class="fl">14</span>,</span>
+<span>                               height <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code></pre></div>
+<p><img src="figures/vis-multi-treeplot-cir.png" class="r-plt" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="term-plot-ver-specific">2.2. Term plot ver.Specific<a class="anchor" aria-label="anchor" href="#term-plot-ver-specific"></a>
+</h3>
+<p><code><a href="../reference/MANGO_TERM_barPLOT_forMULTI.html">HARMONIC_TERM_barPLOT_forMULTI()</a></code> expands a selected tree
+(via <code>clusternum</code>) into its individual GO terms for the
+multiple-case design, showing each term’s Tscore and gene distribution
+ratio.</p>
+<ul>
+<li>
+<code>status</code> — which trees to show
+(<code>"specific"</code>)</li>
+<li>
+<code>condition</code> — reference condition index</li>
+<li>
+<code>clusternum</code> — the tree number to expand (matches the
+tree plot)</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_TERM_barPLOT_forMULTI.html">HARMONIC_TERM_barPLOT_forMULTI</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span>                               DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span>                               status <span class="op">=</span> <span class="st">"specific"</span>,</span>
+<span>                               trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
+<span>                               LABEL <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span><span class="op">)</span>,</span>
+<span>                               condition <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                               clusternum <span class="op">=</span> <span class="fl">12</span>,</span>
+<span>                               width <span class="op">=</span> <span class="fl">10</span>,</span>
+<span>                               height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
+<p><img src="figures/vis-multi-termplot-bar.png" class="r-plt" alt="" width="100%"></p>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
