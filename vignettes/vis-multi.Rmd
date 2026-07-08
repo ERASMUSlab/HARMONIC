@@ -26,7 +26,7 @@ pre {
 ```
 ## R code
 
-### 0. Multiple-case preprocessing & analysis
+## 0. Multiple-case preprocessing & analysis
 The visualizations below assume a completed multiple-case analysis. First run:
 
 ```{r, eval=FALSE}
@@ -47,7 +47,7 @@ HARMONIC_ANALYSIS(filepath = "../HARMONIC_DIFF/HARMONIC/",
                   preprocessing = "F")
 ```
 
-### 1. Heatmap
+## 1. Heatmap
 
 `HARMONIC_HeatMap()` visualizes active trees across multiple conditions as a
 grid. Each row is an active tree and each column is a condition (comparison);
@@ -62,7 +62,7 @@ common versus condition-specific patterns. Key parameters:
 - `max` — upper limit of the color scale
 - `dynamic_analyisis` — whether to restrict to dynamic-analysis trees (`"T"`/`"F"`)
 
-**All trees (`condition = "ALL"`):**
+### 1.1 All trees (`condition = "ALL"`)
 
 ```{r, eval=FALSE}
 HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMONIC_ALL/",
@@ -79,10 +79,10 @@ HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMO
 knitr::include_graphics("figures/vis-multi-heatmap-all.png")
 ```
 
-**Significant trees only (`condition = "SIG"`):**
+### 1.2 Significant trees only (`condition = "SIG"`)
 
 ```{r, eval=FALSE}
-HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMONIC_ALL/",
+HARMONIC_HeatMap(filepath = "../HARMONIC_DIFF/HARMONIC/",
                  DEG_list_name = "input_DEG_list.txt",
                  trends = "UP",
                  condition = "SIG",
@@ -96,7 +96,7 @@ HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMO
 knitr::include_graphics("figures/vis-multi-heatmap-sig.png")
 ```
 
-**Dynamic-analysis trees (`dynamic_analyisis = "T"`):**
+### 1.3 Dynamic-analysis trees (`dynamic_analyisis = "T"`)
 
 Enabling `dynamic_analyisis` restricts the heatmap to trees that are commonly
 detected across the specified range of conditions, highlighting processes that
@@ -104,7 +104,7 @@ are consistently active along the trajectory. Note the much smaller number of
 rows compared to the full heatmap above.
 
 ```{r, eval=FALSE}
-HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMONIC_ALL/",
+HARMONIC_HeatMap(filepath = "../HARMONIC_DIFF/HARMONIC/",
                  DEG_list_name = "input_DEG_list.txt",
                  trends = "UP",
                  condition = "ALL",
@@ -118,7 +118,8 @@ HARMONIC_HeatMap(filepath = "/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMO
 knitr::include_graphics("figures/vis-multi-heatmap-dynamic.png")
 ```
 
-### 2.1. Tree plot ver.Specific
+## 2. Specific-case analysis
+### 2.1. Tree plot
 
 `HARMONIC_TREE_cirPLOT_forMULTI()` shows the active trees of a multiple-case
 analysis in a circular layout, where each wedge is a tree and the concentric
@@ -154,7 +155,7 @@ HARMONIC_TREE_cirPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
 knitr::include_graphics("figures/vis-multi-treeplot-cir.png")
 ```
 
-### 2.2. Term plot ver.Specific
+### 2.2. Term plot
 
 `HARMONIC_TERM_barPLOT_forMULTI()` expands a selected tree (via `clusternum`)
 into its individual GO terms for the multiple-case design, showing each term's
@@ -180,7 +181,8 @@ HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
 knitr::include_graphics("figures/vis-multi-termplot-bar.png")
 ```
 
-### 3.1. Tree plot ver.Common
+## 3. Common-case analysis
+### 3.1. Tree plot
 
 Setting `status = "common"` shows the active trees that are **shared across all
 conditions**, complementing the condition-specific view in section 2. The
@@ -205,7 +207,7 @@ HARMONIC_TREE_cirPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
 knitr::include_graphics("figures/vis-multi-treeplot-common.png")
 ```
 
-### 3.2. Term plot ver.Common
+### 3.2. Term plot
 
 For a common tree (here `clusternum = 2`), the term plot can be drawn for each
 condition in turn (`condition = 1` through `5`, i.e. DAY4 → DAY21), letting you

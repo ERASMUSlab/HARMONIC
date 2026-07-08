@@ -84,9 +84,10 @@ pre {
 <div class="section level2">
 <h2 id="r-code">R code<a class="anchor" aria-label="anchor" href="#r-code"></a>
 </h2>
-<div class="section level3">
-<h3 id="multiple-case-preprocessing-analysis">0. Multiple-case preprocessing &amp; analysis<a class="anchor" aria-label="anchor" href="#multiple-case-preprocessing-analysis"></a>
-</h3>
+</div>
+<div class="section level2">
+<h2 id="multiple-case-preprocessing-analysis">0. Multiple-case preprocessing &amp; analysis<a class="anchor" aria-label="anchor" href="#multiple-case-preprocessing-analysis"></a>
+</h2>
 <p>The visualizations below assume a completed multiple-case analysis.
 First run:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -106,9 +107,9 @@ First run:</p>
 <span>                  dynamic_analyisis <span class="op">=</span> <span class="st">"T"</span>, </span>
 <span>                  preprocessing <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div class="section level3">
-<h3 id="heatmap">1. Heatmap<a class="anchor" aria-label="anchor" href="#heatmap"></a>
-</h3>
+<div class="section level2">
+<h2 id="heatmap">1. Heatmap<a class="anchor" aria-label="anchor" href="#heatmap"></a>
+</h2>
 <p><code><a href="../reference/MANGO_HeatMap.html">HARMONIC_HeatMap()</a></code> visualizes active trees across
 multiple conditions as a grid. Each row is an active tree and each
 column is a condition (comparison); a filled cell indicates the tree was
@@ -135,7 +136,9 @@ inches)</li>
 <code>dynamic_analyisis</code> — whether to restrict to
 dynamic-analysis trees (<code>"T"</code>/<code>"F"</code>)</li>
 </ul>
-<p><strong>All trees (<code>condition = "ALL"</code>):</strong></p>
+<div class="section level3">
+<h3 id="all-trees-condition-all">1.1 All trees (<code>condition = "ALL"</code>)<a class="anchor" aria-label="anchor" href="#all-trees-condition-all"></a>
+</h3>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_HeatMap.html">HARMONIC_HeatMap</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMONIC_ALL/"</span>,</span>
 <span>                 DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
@@ -146,10 +149,12 @@ dynamic-analysis trees (<code>"T"</code>/<code>"F"</code>)</li>
 <span>                 max <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>                 dynamic_analyisis <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-multi-heatmap-all.png" class="r-plt" alt="" width="100%"></p>
-<p><strong>Significant trees only
-(<code>condition = "SIG"</code>):</strong></p>
+</div>
+<div class="section level3">
+<h3 id="significant-trees-only-condition-sig">1.2 Significant trees only (<code>condition = "SIG"</code>)<a class="anchor" aria-label="anchor" href="#significant-trees-only-condition-sig"></a>
+</h3>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_HeatMap.html">HARMONIC_HeatMap</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMONIC_ALL/"</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_HeatMap.html">HARMONIC_HeatMap</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
 <span>                 DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
 <span>                 trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
 <span>                 condition <span class="op">=</span> <span class="st">"SIG"</span>,</span>
@@ -158,15 +163,18 @@ dynamic-analysis trees (<code>"T"</code>/<code>"F"</code>)</li>
 <span>                 max <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>                 dynamic_analyisis <span class="op">=</span> <span class="st">"F"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-multi-heatmap-sig.png" class="r-plt" alt="" width="100%"></p>
-<p><strong>Dynamic-analysis trees
-(<code>dynamic_analyisis = "T"</code>):</strong></p>
+</div>
+<div class="section level3">
+<h3 id="dynamic-analysis-trees-dynamic_analyisis-t">1.3 Dynamic-analysis trees
+(<code>dynamic_analyisis = "T"</code>)<a class="anchor" aria-label="anchor" href="#dynamic-analysis-trees-dynamic_analyisis-t"></a>
+</h3>
 <p>Enabling <code>dynamic_analyisis</code> restricts the heatmap to
 trees that are commonly detected across the specified range of
 conditions, highlighting processes that are consistently active along
 the trajectory. Note the much smaller number of rows compared to the
 full heatmap above.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_HeatMap.html">HARMONIC_HeatMap</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"/data3/psg/NGS_2026/gitHARMONIC/HARMONIC_DIFF/HARMONIC_ALL/"</span>,</span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_HeatMap.html">HARMONIC_HeatMap</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
 <span>                 DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
 <span>                 trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
 <span>                 condition <span class="op">=</span> <span class="st">"ALL"</span>,</span>
@@ -176,8 +184,12 @@ full heatmap above.</p>
 <span>                 dynamic_analyisis <span class="op">=</span> <span class="st">"T"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-multi-heatmap-dynamic.png" class="r-plt" alt="" width="100%"></p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="specific-case-analysis">2. Specific-case analysis<a class="anchor" aria-label="anchor" href="#specific-case-analysis"></a>
+</h2>
 <div class="section level3">
-<h3 id="tree-plot-ver-specific">2.1. Tree plot ver.Specific<a class="anchor" aria-label="anchor" href="#tree-plot-ver-specific"></a>
+<h3 id="tree-plot">2.1. Tree plot<a class="anchor" aria-label="anchor" href="#tree-plot"></a>
 </h3>
 <p><code><a href="../reference/MANGO_TREE_cirPLOT_forMULTI.html">HARMONIC_TREE_cirPLOT_forMULTI()</a></code> shows the active trees
 of a multiple-case analysis in a circular layout, where each wedge is a
@@ -225,7 +237,7 @@ inches)</li>
 <p><img src="figures/vis-multi-treeplot-cir.png" class="r-plt" alt="" width="100%"></p>
 </div>
 <div class="section level3">
-<h3 id="term-plot-ver-specific">2.2. Term plot ver.Specific<a class="anchor" aria-label="anchor" href="#term-plot-ver-specific"></a>
+<h3 id="term-plot">2.2. Term plot<a class="anchor" aria-label="anchor" href="#term-plot"></a>
 </h3>
 <p><code><a href="../reference/MANGO_TERM_barPLOT_forMULTI.html">HARMONIC_TERM_barPLOT_forMULTI()</a></code> expands a selected tree
 (via <code>clusternum</code>) into its individual GO terms for the
@@ -253,8 +265,12 @@ tree plot)</li>
 <span>                               height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-multi-termplot-bar.png" class="r-plt" alt="" width="100%"></p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="common-case-analysis">3. Common-case analysis<a class="anchor" aria-label="anchor" href="#common-case-analysis"></a>
+</h2>
 <div class="section level3">
-<h3 id="tree-plot-ver-common">3.1. Tree plot ver.Common<a class="anchor" aria-label="anchor" href="#tree-plot-ver-common"></a>
+<h3 id="tree-plot-1">3.1. Tree plot<a class="anchor" aria-label="anchor" href="#tree-plot-1"></a>
 </h3>
 <p>Setting <code>status = "common"</code> shows the active trees that
 are <strong>shared across all conditions</strong>, complementing the
@@ -276,7 +292,7 @@ the successive conditions as concentric rings.</p>
 <p><img src="figures/vis-multi-treeplot-common.png" class="r-plt" alt="" width="100%"></p>
 </div>
 <div class="section level3">
-<h3 id="term-plot-ver-common">3.2. Term plot ver.Common<a class="anchor" aria-label="anchor" href="#term-plot-ver-common"></a>
+<h3 id="term-plot-1">3.2. Term plot<a class="anchor" aria-label="anchor" href="#term-plot-1"></a>
 </h3>
 <p>For a common tree (here <code>clusternum = 2</code>), the term plot
 can be drawn for each condition in turn (<code>condition = 1</code>
