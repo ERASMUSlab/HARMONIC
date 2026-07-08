@@ -253,6 +253,91 @@ tree plot)</li>
 <span>                               height <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span></code></pre></div>
 <p><img src="figures/vis-multi-termplot-bar.png" class="r-plt" alt="" width="100%"></p>
 </div>
+<div class="section level3">
+<h3 id="tree-plot-ver-common">3.1. Tree plot ver.Common<a class="anchor" aria-label="anchor" href="#tree-plot-ver-common"></a>
+</h3>
+<p>Setting <code>status = "common"</code> shows the active trees that
+are <strong>shared across all conditions</strong>, complementing the
+condition-specific view in section 2. The circular layout again stacks
+the successive conditions as concentric rings.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/MANGO_TREE_cirPLOT_forMULTI.html">HARMONIC_TREE_cirPLOT_forMULTI</a></span><span class="op">(</span>filepath <span class="op">=</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span>                               DEG_list_name <span class="op">=</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span>                               status <span class="op">=</span> <span class="st">"common"</span>,</span>
+<span>                               trends <span class="op">=</span> <span class="st">"UP"</span>,</span>
+<span>                               LABEL <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span><span class="op">)</span>,</span>
+<span>                               project <span class="op">=</span> <span class="st">"Differentiation"</span>,</span>
+<span>                               condition <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                               tree_size <span class="op">=</span> <span class="fl">8</span>,</span>
+<span>                               label_size <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>                               project_size <span class="op">=</span> <span class="fl">6</span>,</span>
+<span>                               width <span class="op">=</span> <span class="fl">14</span>,</span>
+<span>                               height <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code></pre></div>
+<p><img src="figures/vis-multi-treeplot-common.png" class="r-plt" alt="" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="term-plot-ver-common">3.2. Term plot ver.Common<a class="anchor" aria-label="anchor" href="#term-plot-ver-common"></a>
+</h3>
+<p>For a common tree (here <code>clusternum = 2</code>), the term plot
+can be drawn for each condition in turn (<code>condition = 1</code>
+through <code>5</code>, i.e. DAY4 → DAY21), letting you compare how the
+same tree’s GO terms behave across the trajectory.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">HARMONIC_TERM_barPLOT_forMULTI</span>(<span class="at">filepath =</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>                               <span class="at">DEG_list_name =</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>                               <span class="at">status =</span> <span class="st">"common"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>                               <span class="at">trends =</span> <span class="st">"UP"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>                               <span class="at">LABEL =</span> <span class="fu">c</span>(<span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span>),</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>                               <span class="at">condition =</span> <span class="dv">1</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>                               <span class="at">clusternum =</span> <span class="dv">2</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>                               <span class="at">width =</span> <span class="dv">10</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>                               <span class="at">height =</span> <span class="dv">4</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p><img src="figures/vis-multi-termplot-common1.png" class="r-plt" alt="" width="100%"></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">HARMONIC_TERM_barPLOT_forMULTI</span>(<span class="at">filepath =</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>                               <span class="at">DEG_list_name =</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>                               <span class="at">status =</span> <span class="st">"common"</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>                               <span class="at">trends =</span> <span class="st">"UP"</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>                               <span class="at">LABEL =</span> <span class="fu">c</span>(<span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span>),</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>                               <span class="at">condition =</span> <span class="dv">2</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>                               <span class="at">clusternum =</span> <span class="dv">2</span>,</span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>                               <span class="at">width =</span> <span class="dv">10</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>                               <span class="at">height =</span> <span class="dv">4</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p><img src="figures/vis-multi-termplot-common2.png" class="r-plt" alt="" width="100%"></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">HARMONIC_TERM_barPLOT_forMULTI</span>(<span class="at">filepath =</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>                               <span class="at">DEG_list_name =</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>                               <span class="at">status =</span> <span class="st">"common"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>                               <span class="at">trends =</span> <span class="st">"UP"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>                               <span class="at">LABEL =</span> <span class="fu">c</span>(<span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span>),</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>                               <span class="at">condition =</span> <span class="dv">3</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>                               <span class="at">clusternum =</span> <span class="dv">2</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>                               <span class="at">width =</span> <span class="dv">10</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>                               <span class="at">height =</span> <span class="dv">4</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p><img src="figures/vis-multi-termplot-common3.png" class="r-plt" alt="" width="100%"></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">HARMONIC_TERM_barPLOT_forMULTI</span>(<span class="at">filepath =</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>                               <span class="at">DEG_list_name =</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>                               <span class="at">status =</span> <span class="st">"common"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>                               <span class="at">trends =</span> <span class="st">"UP"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>                               <span class="at">LABEL =</span> <span class="fu">c</span>(<span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span>),</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>                               <span class="at">condition =</span> <span class="dv">4</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>                               <span class="at">clusternum =</span> <span class="dv">2</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>                               <span class="at">width =</span> <span class="dv">10</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>                               <span class="at">height =</span> <span class="dv">4</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p><img src="figures/vis-multi-termplot-common4.png" class="r-plt" alt="" width="100%"></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">HARMONIC_TERM_barPLOT_forMULTI</span>(<span class="at">filepath =</span> <span class="st">"../HARMONIC_DIFF/HARMONIC/"</span>,</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>                               <span class="at">DEG_list_name =</span> <span class="st">"input_DEG_list.txt"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>                               <span class="at">status =</span> <span class="st">"common"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>                               <span class="at">trends =</span> <span class="st">"UP"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>                               <span class="at">LABEL =</span> <span class="fu">c</span>(<span class="st">"DAY4"</span>,<span class="st">"DAY7"</span>,<span class="st">"DAY10"</span>,<span class="st">"DAY14"</span>,<span class="st">"DAY21"</span>),</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>                               <span class="at">condition =</span> <span class="dv">5</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>                               <span class="at">clusternum =</span> <span class="dv">2</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>                               <span class="at">width =</span> <span class="dv">10</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a>                               <span class="at">height =</span> <span class="dv">4</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="er">}</span></span></code></pre></div>
+<p><img src="figures/vis-multi-termplot-common5.png" class="r-plt" alt="" width="100%"></p>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

@@ -179,3 +179,119 @@ HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("figures/vis-multi-termplot-bar.png")
 ```
+
+### 3.1. Tree plot ver.Common
+
+Setting `status = "common"` shows the active trees that are **shared across all
+conditions**, complementing the condition-specific view in section 2. The
+circular layout again stacks the successive conditions as concentric rings.
+
+```{r, eval=FALSE}
+HARMONIC_TREE_cirPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "common",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               project = "Differentiation",
+                               condition = 1,
+                               tree_size = 8,
+                               label_size = 3,
+                               project_size = 6,
+                               width = 14,
+                               height = 12)
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-treeplot-common.png")
+```
+
+### 3.2. Term plot ver.Common
+
+For a common tree (here `clusternum = 2`), the term plot can be drawn for each
+condition in turn (`condition = 1` through `5`, i.e. DAY4 → DAY21), letting you
+compare how the same tree's GO terms behave across the trajectory.
+
+```{r, eval=FALSE}
+HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "common",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               condition = 1,
+                               clusternum = 2,
+                               width = 10,
+                               height = 4)
+}
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-termplot-common1.png")
+```
+
+```{r, eval=FALSE}
+HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "common",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               condition = 2,
+                               clusternum = 2,
+                               width = 10,
+                               height = 4)
+}
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-termplot-common2.png")
+```
+
+```{r, eval=FALSE}
+HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "common",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               condition = 3,
+                               clusternum = 2,
+                               width = 10,
+                               height = 4)
+}
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-termplot-common3.png")
+```
+
+```{r, eval=FALSE}
+HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "common",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               condition = 4,
+                               clusternum = 2,
+                               width = 10,
+                               height = 4)
+}
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-termplot-common4.png")
+```
+
+```{r, eval=FALSE}
+HARMONIC_TERM_barPLOT_forMULTI(filepath = "../HARMONIC_DIFF/HARMONIC/",
+                               DEG_list_name = "input_DEG_list.txt",
+                               status = "common",
+                               trends = "UP",
+                               LABEL = c("DAY4","DAY7","DAY10","DAY14","DAY21"),
+                               condition = 5,
+                               clusternum = 2,
+                               width = 10,
+                               height = 4)
+}
+```
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("figures/vis-multi-termplot-common5.png")
+```
